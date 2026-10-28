@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>Pocket Snake</title>
+  <meta name="theme-color" content="#111827">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Pocket Snake">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app">
+    <header class="bar">
+      <div class="stat">Score <strong id="score">0</strong></div>
+      <div class="stat">Best <strong id="best">0</strong></div>
+      <button id="mute" class="icon-btn" aria-label="Mute">🔊</button>
+      <button id="pause" class="icon-btn" aria-label="Pause">⏸</button>
+    </header>
+    <div id="board-wrap">
+      <canvas id="board" aria-label="Game board"></canvas>
+      <div id="overlay" class="overlay">
+        <h1 id="overlay-title">Pocket Snake</h1>
+        <p id="overlay-text">Swipe or use the arrows to steer.</p>
+        <button id="start" class="big-btn">Play</button>
+      </div>
+    </div>
+    <nav class="pad" aria-label="Arrows">
+      <button data-dir="up" class="arrow up" aria-label="Up">▲</button>
+      <button data-dir="left" class="arrow left" aria-label="Left">◀</button>
+      <button data-dir="down" class="arrow down" aria-label="Down">▼</button>
+      <button data-dir="right" class="arrow right" aria-label="Right">▶</button>
+    </nav>
+  </main>
+  <script type="module" src="main.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
+  </script>
+</body>
+</html>
