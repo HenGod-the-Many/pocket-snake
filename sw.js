@@ -1,6 +1,6 @@
 // Offline support: cache every game file on install, serve from cache first,
 // and refresh the cache in the background so a new version shows on the next open.
-const CACHE = 'pocket-snake-v1';
+const CACHE = 'pocket-snake-v2';
 const FILES = [
   './', 'index.html', 'style.css', 'main.js', 'game.js', 'manifest.webmanifest',
   'icons/icon-180.png', 'icons/icon-192.png', 'icons/icon-512.png',
